@@ -165,18 +165,109 @@ canvas {
 let quizFinished=false;
 let certID="";
 
-const questions=[
- {q:"What is the main purpose of Re Protocol?",a:["Mint new stablecoins","Provide insurance for retail users","Generate yield using reinsurance contracts","Facilitate cross-chain swaps"],c:2},
- {q:"What is Re Protocol?",a:["A centralized insurance company","A decentralized reinsurance yield platform","dex","A lending protocol"],c:1},
- {q:"Which assets can be deposited into Re Protocol?",a:["Only ETH","Only fiat currencies","Stablecoins such as USDC, DAI, USDe, sUSDe","NFTs"],c:2},
- {q:"What are Insurance Capital Layers (ICLs)?",a:["Governance layers","Smart contract vaults allocating capital","Layer-2 networks","Insurance policies for users"],c:1},
- {q:"What is reUSD?",a:["A governance token","A volatile yield token","A principal-protected, yield-accruing USD token","A synthetic leverage product"],c:2},
- {q:"What is reUSDe?",a:["A stable, risk-free token","A governance asset","A performance token that absorbs first-loss risk","A synthetic stablecoin"],c:2},
- {q:"What is the target net annual return for reUSDe?",a:["3–5%","6–8%","10–12%","16–25%"],c:3},
- {q:"How does reUSDe pricing and redemption work?",a:["Real-time redemption","Daily mint and burn","Price compounds daily off a quarterly-refreshed tNAV, with quarterly pro-rata redemptions","Fixed peg"],c:2},
- {q:"What is the daily yield mechanism for reUSD?",a:["Fixed 10% APY","Daily price increases track the higher of 7-day SOFR + 250bps or Ethena sUSDe basis yield","Only on redemption","DAO votes"],c:1},
- {q:"When is reUSDe’s Target NAV refreshed?",a:["Daily","Weekly","Quarterly","Annually"],c:2}
+const questions = [
+  {
+    q: "What is the main goal of MagicBlock?",
+    a: [
+      "Creating NFT marketplaces",
+      "Enabling real-time computation for on-chain applications",
+      "Providing off-chain data storage",
+      "Launching its own Layer-1 blockchain"
+    ],
+    c: 1
+  },
+  {
+    q: "Which core MagicBlock product enables real-time games and applications?",
+    a: [
+      "Magic Wallet",
+      "Ephemeral Rollups",
+      "Static Validators",
+      "Magic Oracle"
+    ],
+    c: 1
+  },
+  {
+    q: "What makes Ephemeral Rollups different from traditional rollups?",
+    a: [
+      "They are fully off-chain",
+      "They do not use smart contracts",
+      "They are application-specific and can be temporary",
+      "They are designed only for DeFi"
+    ],
+    c: 2
+  },
+  {
+    q: "Which blockchain is MagicBlock initially built on?",
+    a: [
+      "Ethereum",
+      "Solana",
+      "Polygon",
+      "Avalanche"
+    ],
+    c: 1
+  },
+  {
+    q: "How does MagicBlock address latency issues in on-chain applications?",
+    a: [
+      "By increasing gas fees",
+      "By using centralized servers",
+      "By moving computation to Ephemeral Rollups with fast finality",
+      "By removing consensus entirely"
+    ],
+    c: 2
+  },
+  {
+    q: "How does MagicBlock ensure the security of its solutions?",
+    a: [
+      "Through closed-source code only",
+      "By using a proprietary consensus mechanism",
+      "By leveraging smart contract audits and the security of the base blockchain",
+      "By fully relying on users"
+    ],
+    c: 2
+  },
+  {
+    q: "Has MagicBlock undergone external security audits?",
+    a: [
+      "No, audits are not part of the roadmap",
+      "Yes, the codebase and architecture have undergone independent audits",
+      "Only internal reviews were conducted",
+      "Audits are planned for the future"
+    ],
+    c: 1
+  },
+  {
+    q: "How is pricing determined for MagicBlock products?",
+    a: [
+      "A fixed monthly subscription",
+      "Completely free for all users",
+      "Based on usage and product type",
+      "Only through purchasing a token"
+    ],
+    c: 2
+  },
+  {
+    q: "Where can developers check the current system status of MagicBlock?",
+    a: [
+      "Discord",
+      "Twitter",
+      "The System Status page",
+      "The Whitepaper"
+    ],
+    c: 2
+  },
+  {
+    q: "What is the purpose of the Request for Products (RFP) at MagicBlock?",
+    a: [
+      "Submitting investment proposals",
+      "Requesting new features or products from the MagicBlock team",
+      "Filing user complaints",
+      "DAO governance voting"
+    ],
+    c: 1
+  }
 ];
+
 
 const quiz=document.getElementById("quiz");
 const progressFill=document.getElementById("progressFill");
